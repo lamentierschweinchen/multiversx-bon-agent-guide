@@ -1,0 +1,14 @@
+.env
+*.pem
+allValidatorsKey*.pem
+operator-wallet*
+validatorKey*
+wallet-*.json
+*mnemonic*
+*secret-key*
+laptop-dry-run/
+live-wallet/
+native-node/runtime/
+node-challenge/artifacts/
+*.log
+*.zip
