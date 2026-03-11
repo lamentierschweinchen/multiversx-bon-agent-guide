@@ -124,12 +124,6 @@ These were the most important live findings from this workspace and should be tr
 
 Do not hide those details behind generic docs. They are the difference between a plausible runbook and one that actually works.
 
-## Workspace Files Worth Preserving
-
-- [README.md](README.md)
-- [docs/finding-values.md](docs/finding-values.md)
-- [docs/machine-checklist.md](docs/machine-checklist.md)
-
 ## Suggested Prompt For Another Agent
 
 `Read AGENT-START-HERE.md in the Battle of Nodes workspace and execute the initial BoN validator setup end to end. Use the local scripts and linked docs first. Minimize manual steps and pause only for wallet creation, wallet funding, missing keys, or hosted server provisioning.`

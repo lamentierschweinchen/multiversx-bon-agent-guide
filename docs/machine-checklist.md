@@ -9,7 +9,7 @@ Current MultiversX guidance for a production node is roughly:
 - `200 GB SSD`
 - stable `100 Mbit/s` connectivity
 
-For safety, I would target:
+A safe minimum target:
 
 - `4 vCPU`
 - `16 GB RAM`

@@ -42,7 +42,7 @@ This answers the practical question behind `.env`: where each value comes from.
   - signature of the delegation contract address produced with the validator BLS private key
   - `mxpy staking-provider add-nodes --validators-pem ...` handles this automatically, so you usually do not need to compute it by hand
 
-## Real blocker for actual BON completion
+## External dependencies for live completion
 
 Even if every file and command is prepared locally, you still need:
 
