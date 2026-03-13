@@ -12,3 +12,5 @@ native-node/runtime/
 node-challenge/artifacts/
 *.log
 *.zip
+.superpowers/
+docs/superpowers/

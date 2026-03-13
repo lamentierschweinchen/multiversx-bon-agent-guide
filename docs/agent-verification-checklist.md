@@ -156,3 +156,94 @@ Challenge 2 is complete when:
 4. service fee change confirmed — `getServiceFee` returns `789`
 5. governance vote confirmed against an active proposal
 6. proof bundle saved for all five tasks
+
+---
+
+## Challenge 3 Verification
+
+Use this section after completing the backup-node, restart-drill, and log-upload tasks.
+
+### Backup Node Proof
+
+Verify and record:
+
+1. main and backup nodes are both registered under the same provider
+2. main and backup names follow the required pattern with `BoN` before the numeric suffix
+3. live heartbeat shows both names active
+4. provider contract or equivalent direct state query confirms the backup node exists even if a summary API lags
+
+### Restart Drill Proof
+
+Verify and record:
+
+1. primary node stopped for the required downtime
+2. old log ends with graceful shutdown
+3. new log begins with startup after the required delay
+4. post-restart node returned to synced and active state
+
+### Log Upload Proof
+
+Verify and record:
+
+1. uploaded archive contains a backup-node log
+2. uploaded archive contains `trie sync in progress`
+3. uploaded archive contains `generated BLS private key for redundancy handler`
+4. exact submitted archive is preserved locally
+
+### Challenge 3 Done State
+
+Challenge 3 is complete when:
+
+1. backup node is live under the same provider with the correct naming pattern
+2. controlled restart drill is proven by real logs
+3. uploaded archive contains the required backup and trie-sync evidence
+4. the proof bundle is saved locally
+
+---
+
+## Challenge 4 Baseline Verification
+
+Use this section after completing Window A and Window B of the baseline stress challenge.
+
+### Pre-Window Checks
+
+Before launching a workload, verify:
+
+1. official window start and end time
+2. current funded challenge-address set and its attribution path back to the registered wallet
+3. main validator is healthy if the page requires node restarts around the window
+4. run artifacts will be written incrementally during the send loop
+
+### Window A: Intra-Shard `MoveBalance`
+
+Verify and record:
+
+1. sender addresses are challenge addresses funded from the registered wallet
+2. sender and receiver are in the same shard
+3. submitted run artifacts exist even if the sender path times out
+4. actual on-chain success count is measured after the run
+
+### Window B: DEX Calls
+
+Verify and record:
+
+1. target contract or pool matches the live task
+2. function and token-transfer shape match the live task
+3. submitted run artifacts exist and include transaction hashes
+4. actual on-chain success count is measured after the run
+
+### Interpretation Rules
+
+1. `submitted` is not the same as `success`
+2. gateway or sender timeouts do not automatically mean the workload failed
+3. if a verifier tool returns `unknown` because of local environment restrictions, rerun the status pass from an unrestricted environment before sending unnecessary recovery load
+4. use success shortfall, not submission count alone, to decide whether another chunk is needed
+
+### Challenge 4 Baseline Done State
+
+Challenge 4 baseline is complete when:
+
+1. Window A qualifying transactions were sent inside the official window and attributed correctly
+2. Window B qualifying DEX calls were sent inside the official window and attributed correctly
+3. per-window run artifacts are saved
+4. on-chain success counts have been measured or can be measured from the saved artifacts

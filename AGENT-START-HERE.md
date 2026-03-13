@@ -30,6 +30,28 @@ Complete five distinct on-chain tasks on top of the existing validator setup:
 
 Start at [docs/challenge-2-playbook.md](docs/challenge-2-playbook.md).
 
+## Challenge 3 Goal
+
+Complete the validator-operations challenge on top of the existing provider:
+
+1. register and run a backup node under the same provider
+2. rename main and backup nodes to the required `BoN` naming pattern
+3. complete the controlled restart drill with real downtime
+4. upload the required backup and trie-sync logs
+
+Start with [docs/challenge-3-learnings.md](docs/challenge-3-learnings.md).
+
+## Challenge 4 Goal
+
+Prepare and execute the baseline stress windows:
+
+1. Window A: high-volume intra-shard `MoveBalance`
+2. Window B: DEX smart contract calls
+
+Treat Part 1 and Part 2 as separate workloads with separate proof and recovery decisions.
+
+Start with [docs/challenge-4-baseline-learnings.md](docs/challenge-4-baseline-learnings.md).
+
 ## Read Order
 
 **Challenge 1 — initial validator setup:**
@@ -47,6 +69,14 @@ Start at [docs/challenge-2-playbook.md](docs/challenge-2-playbook.md).
 8. [docs/challenge-2-playbook.md](docs/challenge-2-playbook.md)
 9. [docs/community-delegation-task.md](docs/community-delegation-task.md) (Task 1 deep dive)
 10. [docs/challenge-2-learnings.md](docs/challenge-2-learnings.md) (cross-task patterns and traps)
+
+**Challenge 3 — backup nodes, restart drill, log upload:**
+
+11. [docs/challenge-3-learnings.md](docs/challenge-3-learnings.md)
+
+**Challenge 4 baseline — stress windows A and B:**
+
+12. [docs/challenge-4-baseline-learnings.md](docs/challenge-4-baseline-learnings.md)
 
 Then inspect these workspace helpers before taking action:
 
@@ -154,3 +184,11 @@ Do not hide those details behind generic docs. They are the difference between a
 **Challenge 2:**
 
 `Read AGENT-START-HERE.md in the Battle of Nodes workspace, then open docs/challenge-2-playbook.md and execute Challenge 2 tasks 1 through 5. Collect proof for each task immediately after execution. Pause only if a wallet is unfunded or no active governance proposal exists.`
+
+**Challenge 3:**
+
+`Read AGENT-START-HERE.md in the Battle of Nodes workspace, then open docs/challenge-3-learnings.md and execute the backup-node, restart-drill, and log-upload tasks. Optimize for accepted proof surfaces: naming, heartbeat, real restart logs, and required uploaded log phrases.`
+
+**Challenge 4 baseline:**
+
+`Read AGENT-START-HERE.md in the Battle of Nodes workspace, then open docs/challenge-4-baseline-learnings.md and execute the baseline stress windows. Prepare retry-safe tooling, preserve incremental run artifacts, and verify on-chain success counts before deciding whether to top up.`

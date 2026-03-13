@@ -33,6 +33,18 @@ and verification. You handle wallet funding and optionally provisioning a server
 10. Service fee change with contract-level verification
 11. Governance vote with proposal freshness checks
 
+**Challenge 3 — validator operations and proof:**
+
+12. Backup node registration and naming
+13. Controlled restart drill with real downtime
+14. Log-upload strategy for trie sync and redundancy proof
+
+**Challenge 4 baseline — stress windows:**
+
+15. High-volume intra-shard `MoveBalance`
+16. DEX swap load with retry-safe artifacts
+17. Attribution, time-window, and verification traps
+
 ## Prerequisites
 
 - [`mxpy`](https://docs.multiversx.com/sdk-and-tools/mxpy/installing-mxpy/) installed
